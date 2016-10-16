@@ -21,7 +21,6 @@ import android.graphics.Typeface;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -29,33 +28,30 @@ import com.google.android.gms.maps.model.VisibleRegion;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import com.google.firebase.database.DatabaseReference;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.*;
 
 public class MapsActivity extends AppCompatActivity
-        implements GoogleMap.OnMyLocationButtonClickListener,
-        OnMapReadyCallback,
+        implements OnMapReadyCallback,
         ActivityCompat.OnRequestPermissionsResultCallback {
 
     private GoogleMap mMap;
-    private GoogleApiClient mGoogleApiClient;
     private double left, right, top, bottom;
     Button search;
     CheckBox acc;
     CheckBox uni;
     CheckBox chan;
     private static final String TAG = "MapsActivity";
-    private DatabaseReference myRef;
     private int REQUEST_CODE;
     private FileParse fp;
     private File mFile;
     private boolean accessible = false;
     private boolean unisex = false;
-    private boolean changingstation = false;
+    private boolean changingStation = false;
+    private String[] params = new String[5];
+    
     /**
      * Request code for location permission request.
      *
@@ -86,7 +82,7 @@ public class MapsActivity extends AppCompatActivity
                     mMap.clear();
                     checkMarkers();
                 } catch (java.io.FileNotFoundException e){
-                    Log.e("javacv", "Failed to find file" + e);
+                    Log.e(TAG, "Failed to find file" + e);
                 }
             }
         });
@@ -111,14 +107,14 @@ public class MapsActivity extends AppCompatActivity
         chan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changingstation = !changingstation;
+                changingStation = !changingStation;
             }
         });
 
         try {
             readFile();
         } catch (java.lang.Exception e){
-            Log.e("javacv", "Failed to parse the file" + e);
+            Log.e(TAG, "Failed to parse the file" + e);
         }
 
     }
@@ -162,23 +158,24 @@ public class MapsActivity extends AppCompatActivity
                 && ((latitude > 0 && latitude > bottom) || (latitude < 0 && latitude < bottom))
                 && ((longitude > 0 && longitude < left) || (longitude < 0 && longitude > left))
                 && ((longitude > 0 && longitude > right) || (longitude < 0 && longitude < right));
-//        boolean a = (latitude > 0 && latitude < top) || (latitude < 0 && latitude > top);
-//        boolean b = ((latitude > 0 && latitude > bottom) || (latitude < 0 && latitude < bottom));
-//        boolean c = ((longitude > 0 && longitude < left) || (longitude < 0 && longitude > left));
-//        boolean d = ((longitude > 0 && longitude > right) || (longitude < 0 && longitude < right));
-//        return a && b && c && d;
     }
 
 
 
     private void addMarker() {
         LatLng latLng = new LatLng(Double.parseDouble(fp.getLat()), Double.parseDouble(fp.getLong()));
+        params[0] = fp.getFloor() != null ? fp.getFloor() : "?";
+        params[1] = fp.getStalls() != null ? fp.getStalls() : "?";
+        params[2] = fp.getHandicap() != null ? fp.getHandicap() : "?";
+        params[3] = fp.getChangingStation() != null ? fp.getChangingStation() : "?";
+        params[4] = fp.getUnisex() != null ? fp.getUnisex() : "?";
+
         String snippet =
-                "Floor: " + fp.getFloor() + "\n" +
-                        "Stalls: " + fp.getStalls() + "\n" +
-                        "Accessible: " + fp.getHandicap() + "\n" +
-                        "Unisex: " + fp.getUnisex() + "\n" +
-                        "ChangingStation: " + fp.getChangingStation();
+                "Floor: " + params[0] + "\n" +
+                        "Stalls: " + params[1] + "\n" +
+                        "Accessible: " + params[2] + "\n" +
+                        "Unisex: " + params[3] + "\n" +
+                        "ChangingStation: " + params[4];
         mMap.addMarker(new MarkerOptions().position(latLng).title(fp.getBuildingName()).snippet(snippet));
     }
 
@@ -195,10 +192,7 @@ public class MapsActivity extends AppCompatActivity
         while (input.hasNextLine()) {
             line = input.nextLine();
             fp.findData(line);
-            String str = fp.getUnisex();
-            str = fp.getChangingStation();
-            str = fp.getHandicap();
-            if (unisex && accessible && changingstation) {
+            if (unisex && accessible && changingStation) {
                 if ((fp.getUnisex() != null && fp.getUnisex().equals("Y")) &&
                         (fp.getHandicap() != null && fp.getHandicap().equals("Y")) &&
                         (fp.getChangingStation() != null && fp.getChangingStation().equals("Y"))) {
@@ -209,12 +203,12 @@ public class MapsActivity extends AppCompatActivity
                         (fp.getHandicap() != null && fp.getHandicap().equals("Y"))) {
                     addMarker();
                 }
-            } else if (unisex && changingstation) {
+            } else if (unisex && changingStation) {
                 if ((fp.getUnisex() != null && fp.getUnisex().equals("Y")) &&
                         (fp.getChangingStation() != null && fp.getChangingStation().equals("Y"))){
                     addMarker();
                 }
-            } else if (accessible && changingstation) {
+            } else if (accessible && changingStation) {
                 if ((fp.getHandicap() != null && fp.getHandicap().equals("Y")) &&
                         (fp.getChangingStation() != null && fp.getChangingStation().equals("Y"))){
                     addMarker();
@@ -223,7 +217,7 @@ public class MapsActivity extends AppCompatActivity
                 if (fp.getHandicap() != null && fp.getHandicap().equals("Y")){
                     addMarker();
                 }
-            } else if (changingstation) {
+            } else if (changingStation) {
                 if (fp.getChangingStation() != null && fp.getChangingStation().equals("Y")){
                     addMarker();
                 }
@@ -237,14 +231,7 @@ public class MapsActivity extends AppCompatActivity
 
         }
 
-        mMap.setOnMarkerClickListener( new OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-                // create your dialog here.
-//                rating.setRating(5);
-                return false;
-            }
-        });
+
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
@@ -300,13 +287,7 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onMyLocationButtonClick() {
-        Toast.makeText(this, "MyLocation button clicked", Toast.LENGTH_SHORT).show();
-        // Return false so that we don't consume the event and the default behavior still occurs
-        // (the camera animates to the user's current position).
-        return false;
-    }
+
 
 
     @Override
