@@ -1,0 +1,97 @@
+CODE |  Building Name                                           |    Latitude  |   Longitude  |   Floor | (# of Stalls) | Handicap (Y/N) | Unisex (Y/N) | Changing Station (Y/N) | Rating 
+AERB | Aerospace and Engineering Research Building              |   47.653994  | -122.305754 |
+ALB |  Allen Library                                            |   47.655440  | -122.306924 |
+ALD |  Alder Hall                                               |   47.655833  | -122.313887 |    1     |       1       |      Y         |     Y        |            Y            |  ?
+AND |  Anderson Hall                                            |   47.651740  | -122.307508 |    
+ARC |  Architecture Hall                                        |   47.654643  | -122.310795 |    1     |       1       |      Y         |      Y       |            ?            |  ? 
+ARC |  Architecture Hall                                        |   47.654643  | -122.310795 |    2     |       1       |      Y         |      Y       |            ?            |  ? 
+ART |  Art Building                                             |   47.658442  | -122.306605 |    1     |       ?       |      ?         |      Y       |            ?            |  ? 
+ART |  Art Building                                             |   47.658442  | -122.306605 |    0     |       ?       |      ?         |      Y       |            ?            |  ? 
+ATG |  Atmospheric Sciences-Geophysics Building                 |   47.653966  | -122.309421 |
+BAG |  Bagley Hall                                              |  47.653438  | -122.308843 |
+BGR |  By George Cafe                                           |   47.656481 | -122.310446 |
+BLD |  Bloedel Hall                                             |  47.651335  | -122.307632 |
+BMM  | Burke Museum                                             |  47.660651  | -122.310529 |
+BNS |  Benson Hall                                              |  47.653094  | -122.309512 |    3      |       ?        |     ?         |       Y       |           ?             | ?
+CDH |  Condon Hall                                              |  47.656623  | -122.316043 |
+CHB |  Chemistry Building                                       |  47.652974  | -122.308352 |
+CHL |  Chemistry Library                                        |  47.653765 | -122.309970  |
+CLK |  Clark Hall                                               |  47.657643 | -122.304895  |
+CMU |  Communications Building                                  | 47.657034   | -122.305260 |    0       |      1        |     ?          |      Y       |           ?             | ?
+CSE |  Paul G. Allen Center for Computer Science & Engineering  |  47.653457  | -122.305924 |
+DEM |  Dempsey Hall                                             |  47.659180  | -122.307677 |
+DEN |  Denny Hall	                                             |  47.658549  | -122.308773 |
+ECC |  Samuel E. Kelly Ethnic Cultural Center                   |  47.655109  | -122.314763 |
+EDP |  Alaska Airlines Arena at Hec Edmundson Pavilion          |  47.652066  | -122.302192 |
+EEB |  Electrical Engineering Building                          |  47.653629  | -122.306505 |
+EGL |  Eagleson Hall                                            |  47.658128  | -122.312404 |
+ELB |  Engineering Library                                      |  47.654662  | -122.304398 |
+ELM |  Elm Hall                                                 |  47.656700  | -122.315224 |
+FAC |  The University of Washington Club                        |  47.655620  | -122.303901 |
+FLK |  Fluke Hall                                               |  47.655762  | -122.303204 |
+FSH |  Fishery Sciences Building	                              |  47.653250  | -122.316339 |    1        |     1        |     ?         |       Y       |           ?             | ?
+FSH |  Fishery Sciences Building	                              |  47.653250  | -122.316339 |    2        |     1        |     ?         |       Y       |           ?             | ?
+FSH |  Fishery Sciences Building	                              |  47.653250  | -122.316339 |    3        |     1        |     ?         |       Y       |           ?             | ?
+GLD |  Gould Hall                                               |  47.654926  | -122.312689 |    2        |     1        |     ?         |       Y       |           ?             | ?
+GRB |  Gerberding Hall                                          |  47.655319  | -122.309331 |
+GTH |  Guthrie Hall                                             |  47.653960  | -122.310871 |
+GUG |  Guggenheim Hall                                          |  47.654257  | -122.306338 |
+GWN |  Gowen Hall	                                             |  47.656437  | -122.307820 |
+HAG |  Henry Art Gallery                                        |  47.656186  | -122.311659 |
+HCK |  Hitchcock Hall                                           |  47.651928  | -122.311508 |
+HGT |  Haggett Hall                                             |  47.659331  | -122.303600 |
+HLL |  Hall Health Center                                       |  47.656130  | -122.303927 |
+HND |  Henderson Hall                                           |  47.655218  | -122.316907 |
+HNS |  Hansee Hall                                              |  47.660838  | -122.306463 |
+HPT |  Hughes Penthouse Theatre                                 |  47.660725  | -122.308062 |
+HUB |  Husky Union Building                                     |  47.655748  | -122.305437 |    3        |     ?        |     Y         |       Y       |           ?             | ?
+HUS |  Husky Stadium                                            |  47.650497  | -122.302248 |
+HUT |  Hutchinson Hall                                          |  47.659600  | -122.306537 |
+IMA |  Intramural Activities Building	                        |  47.653578  | -122.301264 |
+INT |  Intellectual House                                       |  47.658283  | -122.304721 |
+JHN |  Johnson Hall                                             |  47.654669  | -122.308918 |
+KIN |  Kincaid Hall                                             |  47.652659  | -122.310596 |
+KNE |  Kane Hall                                                |  47.656623  | -122.309121 |
+LAH |  Lander Hall                                              |  47.655826  | -122.314904 |
+LAW |  William H. Gates Hall                                    |  47.659336  | -122.310851 |
+LEW |  Lewis Hall                                               |  47.658893  | -122.305310 |
+LOW |  Loew Hall	                                             |  47.654292  | -122.304465 |
+MAH |  Maple Hall                                               |  47.655535  | -122.316242 |
+MEB |  Mechanical Engineering Building                          |  47.653639  | -122.304711 |
+MCC |  McCarty Hall                                             |  47.660481  | -122.304609 |
+MCM |  McMahon Hall                                             |  47.658291  | -122.303640 |
+MGH |  Mary Gates Hall                                          |  47.654959  | -122.307888 |
+MKZ |  Mackenzie Hall                                           |  47.658736  | -122.307262 |
+MLR |  Miller Hall	                                             |  47.657220  | -122.306294 |
+MNY |  Meany Hall                                               |  47.655580  | -122.310559 |
+MOL |  Molecular Engineering & Sciences                         |  47.654382  | -122.309819 |
+MOR |  More Hall	                                             |  47.652493  | -122.304820 |
+MRC |  Mercer Court                                             |  47.654430  | -122.317799 |
+MUS |  Music Building                                           |  47.657624  | -122.305722 |
+OCN |  Ocean Sciences Building                                  |  47.651284  | -122.312634 |   3        |      2       |     ?         |       Y       |            ?            |  ?
+OUG |  Odegaard Undergraduate Library	                        |  47.656440  | -122.310303 |
+PAA |  Physics/Astronomy Building A	                           |  47.652980  | -122.310994 |
+PAB |  Physics/Astronomy Building	                              |  47.653594  | -122.311112 |
+PAR |  Parrington Hall	                                       |  47.657422  | -122.310213 |    0       |      1        |     ?         |       Y       |           ?             | ?
+PAR |  Parrington Hall	                                       |  47.657422  | -122.310213 |    3       |      1        |     ?         |       Y       |           ?             | ?
+PCAR | PACCAR Hall                                              |  47.659112  | -122.308609 |
+PDL |  Padelford Hall                                           |  47.656940  | -122.304389 |
+PHT |  Floyd and Delores Jones Playhouse Theatre                |  47.656644  | -122.313562 |
+RAI |  Raitt Hall                                               |  47.657895  | -122.307216 |
+ROB |  Roberts Hall	                                          |  47.652042  | -122.305056 |
+SAV |  Savery Hall	                                             |  47.657193  | -122.308279 |   2        |      1        |     ?          |      Y       |            ?             |  ?
+SAV |  Savery Hall	                                             |  47.657193  | -122.308279 |   3        |      1        |     ?          |      Y       |            ?             |  ?
+SIG |  Sieg Hall                                                |  47.654872  | -122.306544 |
+SMI |  Smith Hall                                               |  47.656389  | -122.307496 |
+SMZ |  Schmitz Hall                                             |  47.656558  | -122.312668 |
+SUZ |  Suzzallo Library	                                       |  47.655805  | -122.308097 |
+SWS |  Social Work / Speech and Hearing Sciences Building       |  47.657490  | -122.312394 |   2        |     2         |      ?         |      Y       |            ?             |  ?
+TER |  Terry Hall                                               |  47.655694  | -122.317052 |
+THO |  Thomson Hall                                             |  47.656532  | -122.305778 |
+UBS |  University Bookstore	                                    |  47.660424  | -122.312818 
+UMCC | University Medical Center                                |  47.650203  | -122.308630 |
+UTC |  Transportation Services Building                         |  47.656420  | -122.313629 |
+UTO |  Poplar Hall & Arts Ticket Office                         |  47.656531  | -122.313969 |
+UWTT | University of Washington Tower Building                  |  47.660725  | -122.314644 |
+WFS |  Winkenwerder Forest Laboratory                           |  47.651483  | -122.306789 |
+WIL |  Wilcox Hall                                              |  47.651879  | -122.304733 |

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "905151497848",
+    "firebase_url": "https://flush-70b83.firebaseio.com",
+    "project_id": "flush-70b83",
+    "storage_bucket": "flush-70b83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905151497848:android:b21f1541b65b1f97",
+        "android_client_info": {
+          "package_name": "edu.washington.cs.flush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905151497848-4fec1us8mfh1vltgii214nms64d13kn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD8ueGC_WPPlIUnWjfxutpVtWMXOBjJTk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
