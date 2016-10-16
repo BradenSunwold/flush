@@ -167,8 +167,8 @@ public class MapsActivity extends AppCompatActivity
         params[0] = fp.getFloor() != null ? fp.getFloor() : "?";
         params[1] = fp.getStalls() != null ? fp.getStalls() : "?";
         params[2] = fp.getHandicap() != null ? fp.getHandicap() : "?";
-        params[3] = fp.getChangingStation() != null ? fp.getChangingStation() : "?";
-        params[4] = fp.getUnisex() != null ? fp.getUnisex() : "?";
+        params[3] = fp.getUnisex() != null ? fp.getUnisex() : "?";
+        params[4] = fp.getChangingStation() != null ? fp.getChangingStation() : "?";
 
         String snippet =
                 "Floor: " + params[0] + "\n" +

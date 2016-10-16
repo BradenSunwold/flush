@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">flush</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="app_name">Flush</string>
+    <string name="title_activity_maps">Flush</string>
+    <string name="title_activity_rating">Rate</string>
 
     <!--    Permissions    -->
     <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
